@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --tomato: #fc8721;
+  --container-width: 1280px;
+  --section-padding: 1.25rem; /* 20px */
+}
+
+.section {
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--section-padding);
+  padding-right: var(--section-padding);
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+.btn {
+  @apply rounded-full font-semibold shadow-md transition active:scale-95;
+}
+html {
+  scroll-behavior: smooth;
+}
+.input {
+  @apply w-full p-3 border border-gray-300 rounded-lg outline-none
+         focus:ring-2 focus:ring-(--tomato);
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.2s ease-out;
+}
